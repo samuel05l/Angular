@@ -1,0 +1,32 @@
+.cronometro{
+    color: #fff; /* Color de texto blanco */
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff; /* Sombras neón */
+
+}
+
+.cronometro:before,
+.cronometro:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.cronometro:before {
+/* Gradiente neón */
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(10px);
+}
+
+.cronometro:after {
+  background: black; /* Gradiente neón */
+  z-index: -2;
+  opacity: 0.6;
+  filter: blur(20px);
+}

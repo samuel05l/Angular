@@ -1,0 +1,7 @@
+*{
+    color: #fff; /* Color de texto blanco */
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff; /* Sombras neón */  
+}

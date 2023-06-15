@@ -1,0 +1,22 @@
+<h1>Operaciones</h1>
+
+<h3>la suma de 8+2 es: {{sum}}</h3>
+<h3>la resta de 8-2 es: {{res}}</h3>
+<h3>la multiplicacion de 8*2 es: {{mult}}</h3>
+<h3>la divicion de 8/2 es: {{div}}</h3>
+
+
+<h1>Aumentar  y Disminuir</h1>
+
+<p>{{contador}}</p>
+
+<button (click) = "incrementar()" >Sumar</button>
+<button (click) = "decrementar()" >Restar</button>
+
+
+<div>
+    <p>Ingrese nombre <input type="text" [(ngModel)]="nombre"></p>
+    <p>Ingrese apellido <input type="text" [(ngModel)] ="apellido"></p>
+    <p>Su nombre completo: {{nombre}}.{{apellido}}</p>
+</div>
+
