@@ -1,0 +1,61 @@
+<!-- <div *ngIf="articulos!=null;else espera">
+  <table border="1">
+    <tr>
+      <td>Id</td>
+      <td>Nombre</td>
+      <td>Esatdo</td>
+      <td>Especie</td>
+      <td>Tipo</td>
+      <td>Genero</td>
+      <td>Origen</td>
+      <td>locacion</td>
+      <td>Imagen</td>
+      <td>Episodio</td>
+    </tr>
+    <tr *ngFor="let art of articulos">
+    <td>{{art.id}}</td>
+      <td>{{ art.name }}</td>
+      <td>{{ art.status }}</td>
+      <td>{{ art.species }}</td>
+      <td>{{ art.type }}</td>
+      <td>{{ art.gender }}</td>
+      <td>{{ art.origin.name }}<br><a href="">{{art.origin.url}}</a></td>
+      <td>{{ art.location.name }}<br><a href="">{{art.location.url}}</a></td>
+      <td><img [src]="art.image" alt="{{ art.name }}" /></td>
+      <td>{{art.episode}}</td>
+  </table>
+</div>
+<ng-template #espera>Esperando datos...</ng-template> -->
+<div class="container">
+  <div class="table-container" *ngIf="articulos!=null; else espera">
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Estado</th>
+        <th>Especie</th>
+        <th>Tipo</th>
+        <th>Género</th>
+        <th>Origen</th>
+        <th>Localización</th>
+        <th>Imagen</th>
+        <th>Episodio</th>
+      </tr>
+      <tr *ngFor="let art of articulos">
+        <td>{{art.id}}</td>
+        <td>{{ art.name }}</td>
+        <td>{{ art.status }}</td>
+        <td>{{ art.species }}</td>
+        <td>{{ art.type }}</td>
+        <td>{{ art.gender }}</td>
+        <td>{{ art.origin.name }}<br><a href="">{{art.origin.url}}</a></td>
+        <td>{{ art.location.name }}<br><a href="">{{art.location.name.id}}</a></td>
+        <td><img [src]="art.image" alt="{{ art.name }}" /></td>
+        <td>{{art.episode}}</td>
+      </tr>
+    </table>
+  </div>
+  <ng-template #espera>
+    <div class="waiting-message">Esperando datos...</div>
+  </ng-template>
+</div>
